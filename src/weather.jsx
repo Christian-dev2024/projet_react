@@ -16,13 +16,15 @@ const Weather = () => {
 
     const[image, setImage] = useState('') ;
 
+    const [prev, setPrev] = useState([]) ;
+
     const[error, setError] = useState('') ;
 
     useEffect(()=>{
-        Click('Yopougon')
+        Click('Abidjan')
     }, []);
 
-    function Click (city){    // recupéraion des données api
+    function Click (city){  // recupéraion des données api
         if(city !== ''){
             axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=7b76a42edcda1c5a30c28ff1377bf927&units=metric`)
             .then(res => {
@@ -78,13 +80,22 @@ const Weather = () => {
                     console.error('Erreur lors de la récupération des données :', err);
                 }
             });
-            
+
+            axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=7b76a42edcda1c5a30c28ff1377bf927&units=metric`) // recuperation des données de prévision
+                .then(res=>{
+                    console.log(res.data.list) ;
+                    setPrev(res.data.list.slice(0,8)) ;
+                })
+                .catch(err => {
+                    console.error(err)
+                })
         }
+    
     }    
     return (
         <div>
             <Card temperature={celcus} ville={cityName} humidité={humidity} 
-            vent={wind} handleSearch={Click} meteo={condition} icon={image} erreur={error}/>
+            vent={wind} handleSearch={Click} meteo={condition} icon={image} erreur={error} prevision={prev}/>
         </div>
     )
 }

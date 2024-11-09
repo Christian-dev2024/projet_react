@@ -1,6 +1,6 @@
 .container{
   width: 100%;
-  height: 100vh;
+  height: 110vh;
   background-color: #63bcff;
 }
 .weather{
@@ -8,20 +8,39 @@
   height: 550px;
   border-radius: 10px;
   position: relative;
-  bottom: 12%;
+  bottom: 7%;
+  right: 30%;
   margin: 100px auto;
   background: linear-gradient(150deg, #6A49FA , #453284 );
 }
 
+.logo p{
+  font-size: 25px;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: #453284 2px 2px 2px ;
+}
+
+.logo img{
+  height: 70px;
+}
 .search{
   position: relative;
-  left: 39%;
-  bottom: 5%;
-  width: 350px;
+  bottom: 4%;
+  height: 72px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.7rem;
+}
+
+.search .logo{
+  height: 50px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  width: 900px;
+  gap: 10px;
 }
 
 .search input{
@@ -124,4 +143,38 @@
 .erreur p{
   color: #3b1ca3; 
   font-size: 30px;
+}
+
+.prevision{
+  position: relative;
+  bottom: 70%;
+  left: 145%;
+  height: 400px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr;
+  gap: 15px;
+  row-gap: 80px;
+  margin-left: 30%;
+}
+
+.box-previson{
+  border-radius: 10px;
+  width: 180px;
+  padding-inline: 1rem;
+  background: linear-gradient(150deg, #6A49FA , #453284 );
+}
+
+.box-previson p{
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.box-previson img{
+  position: relative;
+  left: 34%;
+  height: 60px;
 }
