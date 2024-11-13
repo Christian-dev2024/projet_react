@@ -17,7 +17,7 @@ const Card = ({temperature, ville, humidité, vent, meteo, icon, handleSearch, p
             <div className='search' >
                 <div className="logo">
                     <p>Weatther Globe</p>
-                    <img src="/image/cloudy.png" alt="logo" />
+                    <img src="/image/contrast.png" alt="logo" />
                 </div>
                 <input type='text' value={city} placeholder='Enter city name' onChange={e => setCity(e.target.value)}/>
                 <button onClick={handleClick}><SearchIcon/></button>

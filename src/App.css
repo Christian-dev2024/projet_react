@@ -1,6 +1,6 @@
 .container{
   width: 100%;
-  height: 110vh;
+  height: 105vh;
   background-color: #63bcff;
 }
 .weather{
@@ -8,7 +8,7 @@
   height: 550px;
   border-radius: 10px;
   position: relative;
-  bottom: 7%;
+  bottom: 12%;
   right: 30%;
   margin: 100px auto;
   background: linear-gradient(150deg, #6A49FA , #453284 );
@@ -26,7 +26,7 @@
 }
 .search{
   position: relative;
-  bottom: 4%;
+  bottom: 6%;
   height: 72px;
   display: flex;
   justify-content: center;

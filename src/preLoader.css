@@ -1,0 +1,32 @@
+.preloader{
+    height: 100vh;
+    width: 100%;
+    color: #6A49FA;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 55;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.texte-preloader{
+    width: 780px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.texte-preloader span{
+    font-size: 70px;
+    font-weight: 600;
+}
+
+.texte-preloader span img{
+    height: 200px;
+}

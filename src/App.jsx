@@ -1,11 +1,12 @@
 import './App.css'
 import Weather from './weather'
-import Card from './cardWeather'
+import PreLoader from './preLoader.jsx'
 
 function App() {
 
   return (
     <>
+      <PreLoader/>
       <Weather/>
     </>
       
