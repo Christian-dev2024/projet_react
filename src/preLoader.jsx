@@ -6,7 +6,7 @@ const PreLoader = () => {
 
     useEffect(()=>{
         preLoaderAnim()
-    },[]);
+    },[]);   
 
     return (
         <div className='preloader'>
@@ -14,6 +14,10 @@ const PreLoader = () => {
                 <span>Weatther</span>
                 <span>Globle</span>
                 <span><img src="/image/contrast.png" alt="logo" /></span>
+            </div>
+            <div className="motif">
+                <div className="motifs-2"></div>
+                <div className="motifs-1"></div>
             </div>
         </div>
     )

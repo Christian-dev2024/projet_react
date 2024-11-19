@@ -24,6 +24,8 @@ const Weather = () => {
         Click('Abidjan')
     }, []);
 
+
+
     function Click (city){  // recupéraion des données api
         if(city !== ''){
             axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=7b76a42edcda1c5a30c28ff1377bf927&units=metric`)
@@ -95,7 +97,7 @@ const Weather = () => {
     return (
         <div>
             <Card temperature={celcus} ville={cityName} humidité={humidity} 
-            vent={wind} handleSearch={Click} meteo={condition} icon={image} erreur={error} prevision={prev}/>
+            vent={wind} handleSearch={Click} meteo={condition} icon={image} erreur={error} prevision={prev} />
         </div>
     )
 }
