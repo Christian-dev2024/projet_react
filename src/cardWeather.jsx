@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './App.css'
 import SearchIcon from '@mui/icons-material/Search';
+import ClearIcon from '@mui/icons-material/Clear';
 
 const Card = ({temperature, ville, humidité, vent, meteo, icon, handleSearch, prevision, erreur}) => {
 
@@ -24,7 +25,7 @@ const Card = ({temperature, ville, humidité, vent, meteo, icon, handleSearch, p
             <div className='search' >
                     <div className="logo">
                         <p>Weather Globe</p>
-                        <img src="/image/contrast.png" alt="logo" />
+                        <img src="/image/cloudy.png" alt="logo" />
                     </div>
                     <input type='text' value={city} placeholder='Enter city name' onChange={e => setCity(e.target.value)}/>
                     <button  onClick={handleClick}><SearchIcon/></button>
@@ -33,13 +34,13 @@ const Card = ({temperature, ville, humidité, vent, meteo, icon, handleSearch, p
             <div className="box-search">
                 <div className="logo">
                     <p>Weather Globe</p>
-                    <img src="/image/contrast.png" alt="logo" />
-                </div>
+                    <img src="/image/cloudy.png" alt="logo" />
+                </div >
                     {click &&(<div className='barreSearch'>
-                                <input type='text' value={city} placeholder='Enter city name' onChange={e => setCity(e.target.value)} />    
-                                <div  onClick={handleClick}><SearchIcon/></div>
+                            <SearchIcon id='btn-1-search' onClick={handleClick}/>
+                            <input id='zone'  type='text' value={city} placeholder='Enter city name' onChange={e => setCity(e.target.value)}  />    
                             </div>)}
-                            <button onClick={clicky}><SearchIcon/></button>
+                            <div onClick={clicky}>{click ? <ClearIcon className='btn-search'/> : <SearchIcon className='btn-search'/>}</div>
             </div>
 
                 <div className={`weather ${erreur ? 'hidden' : ''}`}>
