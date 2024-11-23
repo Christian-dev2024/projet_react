@@ -360,7 +360,7 @@
 
 @media (min-width: 510px) and (max-width : 900px ) {
   *{
-    margin-inline: 0;
+    margin: 0;
   }
   .container{
     position: absolute;

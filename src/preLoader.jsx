@@ -11,7 +11,7 @@ const PreLoader = () => {
     return (
         <div className='preloader'>
             <div className="texte-preloader">
-                <span>Weatther</span>
+                <span>Weather</span>
                 <span>Globle</span>
                 <span><img src="/image/contrast.png" alt="logo" /></span>
             </div>
