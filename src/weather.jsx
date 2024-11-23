@@ -22,7 +22,7 @@ const Weather = () => {
 
     useEffect(()=>{
         Click('Abidjan')
-    }, []);
+    }, []);                                                        
 
 
 
